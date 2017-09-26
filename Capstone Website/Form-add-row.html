@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>add-button-template</title>
+<link rel="stylesheet" href="Form-add-row.css">
+
+</head>
+
+<body>
+	<div class="form-container">
+	<form>
+		<div class="container-left">
+			Asset Tag Number:<br>
+			<input type="text" name="asset-tag"><br>
+			Manufacturer:<br>
+			<input type="text" name="manufacturer"><br>
+			Brand:<br>
+			<input type="text" name="brand"><br>
+			Model:<br>
+			<input type="text" name="model"><br>
+			
+		</div>
+		<div class="container-right">
+			Date and Time added:<br>
+			<input name="date-box" id="date-box"><br>
+			<script>
+				document.getElementById('date-box').value = Date();
+			</script>
+			Quantity Left:<br>
+			<input type="text" name="quantity"><br>
+			Description:<br>
+			<textarea type="text" id="large-text-box" style="width: 200px; height: 100px" rows="10" cols="80"></textarea><br>
+			<div class="container-buttons">
+				<button name="ok-button" type="button">OK</button>
+				<button name="cancel-button" type="button">Cancel</button>
+			</div>
+		</div>
+	</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ----------------TOP MENU BAR -----------------------*/
+
+.navbar-navbar-default{
+	background-color: #323232;
+	margin-left: 250px;
+	position: fixed;
+	width: 100%;
+	border-style: groove;
+	transition: all 0.5s;
+}
+
+span.separator2{
+	border-bottom: 2px solid #606060;
+	width: 100%;
+	height: .5px;
+	display: block;
+	z-index: 1;
+	
+}
+
+.container-fluid{
+	height: 50px;
+	
+}
+
+/*-----------------NAV BAR ----------------------------*/
+#menu-container{
+	height: 100%;
+	width: 300.5px;
+	list-style-type: none;
+	margin-left: -250px;
+	left: 200px;
+	right: 50px;
+	background: #323232;
+	position: fixed;
+	z-index: 10;
+	border-style: groove;
+	transition: all 0.5s;
+}
+
+
+
+
+
+/*-----------------NAVBAR -> MENU ---------------------*/
+.active{
+	width: 300px;
+	list-style-type: none;
+	height: 50px;
+	position: absolute;
+	z-index: 1;
+	
+}
+.active ul{
+	width: 100%;
+	float: left;
+	margin: 0px;
+	
+	
+}
+/*.active i {
+	line-height: 25px;
+	color: #999999;
+	
+	text-decoration: none;
+	text-align: center;
+}*/
+
+.top-menu-items{
+	margin-bottom: 0px;
+	
+}
+.top-menu-items i, .top-menu-items a, .dropdown i{
+	line-height: 25px;
+	color: #999999;
+	text-decoration: none;
+	text-align: center;
+	height: 100%;
+	width: 29.9px;
+	zoom: 2;
+}
+
+
+.top-menu-items i:hover, .top-menu-items a:hover, .dropdown i:hover{
+	color: #000000;
+	background-color: #34A4C2;
+	text-decoration: none;
+}
+
+.dropdown{
+	display: inline-block;
+	zoom: 2;
+	text-align: center;
+	position: fixed;
+	
+}
+
+.dropdown-menu{
+	
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	
+	
+	
+	
+}
+
+.dropdown-menu a{
+	
+	color: black;
+	font-size: 30%;
+	text-decoration: none;
+	display: block;
+	width: auto;
+	text-align: left;
+	
+	
+}
+
+.dropdown:hover .dropdown-menu{
+	display: block;
+	
+	
+}
+
+.dropdown:hover .dropdown-menu a:hover{
+	color: #000000;
+	background-color: #34A4C2;
+}
+
+.dropdown-menu .separator-menu{
+	border-top: .5px solid #606060;
+	height: .5px;
+	display: block;
+	
+}
+span.separator{
+	border-top: 2px solid #606060;
+	height: .5px;
+	display: block;
+	z-index: 1;
+}
+
+
+
+/*----------------- NAVBAR -> SIDEBAR -------------*/
+
+.sidebar-nav{
+	margin-top: 50px;
+	height: 89%;
+	
+}
+
+.sidebar-ul {
+	width: 100%;
+	height: 100%;
+	min-width: 50px; 
+	overflow-y: auto; 
+	position: absolute;
+	
+}
+
+.sidebar-ul  a{
+	display: block;
+	color: #999999;
+	padding: 8px;
+	text-decoration: none;
+	
+	
+}
+/*.sidebar-ul li a{
+	
+	
+	color: #999999;
+	display:block;
+	text-decoration: none;
+	padding: 8px;
+	position: fixed;
+
+	
+}*/
+
+.sidebar-ul a:hover{
+	
+	color: #000000;
+	background-color: #34A4C2;
+	text-decoration: none;
+	display: block;
+
+}
+
+body,html{
+	padding: 0;
+	margin: 0;
+	height: 100%
+}
+
+
+/*-------------------NAVBAR -> BOTTOMBAR ---------------*/
+.bottom-navbar{
+	width: 290px;
+	list-style-type: none;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	
+	
+}
+
+.bottom-navbar ul{
+	width: 100%;
+	float: left;
+	
+}
+
+.bottom-navbar  i{
+	line-height: 25px;
+	color: #999999;
+	width: 32%;
+	text-decoration: none;
+	text-align: center;
+	
+}
+
+.bottom-navbar-items i{
+	text-align: center;
+	zoom: 2;
+	display: inline-block; 
+	left: -19px;
+	
+}
+
+.bottom-navbar i:hover{
+	color: #000000;
+	background-color: #34A4C2;
+}
+
+span.separator3{
+	border-bottom: 2px solid #606060;
+	width: 86.4%;
+	height: .5px;
+	display: block;
+	z-index: 1;
+}
+
+/*----------------------MAIN BODY OF PAGE---------------------*/
+
+.body-container{
+	left: 250px;
+	top: 55px;
+	position: absolute;
+/*
+	height: auto;
+	width: auto;
+*/
+	min-width: 960px; 
+	overflow-y: auto; 
+	overflow-x: auto;
+	
+}
+
+.header-container{
+	width: auto;
+	position: fixed;
+	height: auto;
+	border-style: dashed;
+	min-width: 960px; 
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	min-height: 150px;
+	margin-left: 100px;
+/*
+	overflow-y: auto;
+	overflow-x: auto;
+*/
+	
+}
+
+.data-table-container{
+	top: 275px;
+	margin-left: 100px;
+	width: auto;
+	height: inherit;
+	position: fixed;
+	border-style: dashed;
+/*
+	min-width: 960px; 
+	min-height: 350px;
+*/
+	background-color: #FFFFFF;
+}
+
+.data-table-header{
+	width: 100%;
+	height: auto;
+	border-style: double;
+	min-width: 960px; 
+}
+
+.data-table-table{
+	height: auto;
+	width: auto;
+	overflow-y: auto;
+	min-width: 160px; 
+}
+
+.data-table-table table{
+	height: 100%;
+	
+	margin-bottom: 0px;
+	
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.header-container{
+	width: auto;
+	height: 35%;
+	background-color: #292929;
+	color: #999999;
+	margin-top: -10px;
+/*
+	overflow-y: auto;
+	overflow-x: auto;
+*/
+}
+
+.data-table-container{
+	width: auto;
+	height: 55%;	
+	margin-top: 10px;
+	
+/*
+	min-width: 960px; 
+	min-height: 350px;
+*/
+	background-color: #FFFFFF;
+	line-height: 14px;
+}
+
+.table-buttons{
+	width: 40%;
+	zoom: 1.5;
+}
+
+.table-buttons li{
+	width: 10%;
+}
+
+.data-table-table{
+	height: 100%;
+}
+.data-table-table table{
+	height: 100%;
+	width: 100%;
+	background-color: #292929;
+	color: #999999;
+	overflow-y: auto;
+}
+
+
+
+
+
+.data-table-table tbody .row:hover{
+	color: #000000;
+	background-color: #34A4C2;
+}
+
+#data-data-table > #table > .row.sel{
+	color: #000000;
+	background-color: #34A4C2;
+}
+
+tr{
+	width: 100%;
+	height: auto;
+}
+thead{
+	display: table-header-group;
+	vertical-align: middle;
+	background-color: #000;
+	color: #FFF;
+}
+
+.highlight{  
+	background-color: #AFAFAF; 
+	color: black;
+}
+
+
+
+
+

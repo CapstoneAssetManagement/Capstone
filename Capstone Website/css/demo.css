@@ -1,0 +1,208 @@
+html, body {
+  overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	width: auto;	
+}
+
+/* Lists */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+#container {
+  position: relative;
+  padding: 20px 40px;
+  padding-top: 80px;
+  height: inherit;
+  overflow-y: auto;
+  
+}
+.top-menu-buttons{
+	width: 200px;
+	float: left;
+	height: inherit;
+}
+
+
+#hamburger{
+	width: 100%;
+	height: 97%;
+}
+
+
+/* Menu Button */
+.top-menu-buttons a, 
+.top-menu-buttons button, .dropdown i{
+  float: left;
+  line-height: 25px;
+  width: 25%;
+  height: inherit;
+  background: #000;
+  color: #FFF;
+  padding-left: 5px;
+  border: 0px;
+  zoom: 2;
+  top: 0;
+  
+	
+}
+
+#cog, #home, #hamburger{
+	top: 1px;
+	
+	height: auto;
+	
+}
+
+#cog:hover, #home:hover, #hamburger:hover{
+	margin: 0px;
+	height: auto;
+	bottom: 0;
+}
+.top-menu-buttons a:hover, 
+.top-menu-buttons button:hover, .dropdown i:hover,
+#hamburger:hover{
+	color: #000000;
+	background-color: #34A4C2;
+	height: auto;
+	text-decoration: none;
+	top: 0px;
+	bottom: 0px;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  background: #000;
+  color: #FFF;
+  width: 100%;
+  height: auto;
+  z-index: 9998;
+}
+
+.header-text-container{
+	
+	width: auto;
+	height: auto;
+	text-align: center;
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	
+}
+
+ .header-text-container #submit-btn, .header-text-container input{
+	width: auto;
+	
+	display: inline-block;
+	
+	
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  border-top: 1px solid #EEE;
+  color: #999;
+  padding: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/*# sourceMappingURL=demo.css.map */
+
+
+.dropdown{
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	width: 25%;
+}
+
+
+
+#dropdown-menu{
+	display: none;
+	width: auto;
+	height: 100%;
+	position: absolute;
+	margin-top: 2px;
+	background-color: #f9f9f9;
+	padding: 0px;
+}
+
+
+
+#dropdown-menu a{
+
+	
+	height: 100%;
+	color: #000000;
+	background-color: #EEE;
+	font-size: 60%;
+	text-decoration: none;
+
+	display: block;
+
+	width: 100%;
+
+	text-align: left;
+}
+
+
+
+.dropdown:hover #dropdown-menu{
+
+	display: block;
+
+	
+
+	
+
+}
+
+
+
+.dropdown:hover #dropdown-menu a:hover{
+
+	color: #000000;
+
+	background-color: #34A4C2;
+
+}
+
+
+
+#dropdown-menu .separator-menu{
+
+	border-top: .5px solid #606060;
+
+	height: .5px;
+
+	display: block;
+
+	
+
+}
+
+span.separator{
+
+	border-top: 2px solid #606060;
+
+	height: .5px;
+
+	display: block;
+
+	z-index: 1;
+
+}
+
+
+
+
+
+
+

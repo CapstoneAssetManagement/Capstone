@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asset Management Database</title>
+<link href="homepage.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<script>
+//	function myToggle(){
+//		var x = document.getElementById("#glyphicon-chevron-left");
+//		x.onclick = function() {
+//			if(this.getAttribute("class") == "#menu-container"){
+//				this.setAttribute("class", "#menu-container");
+//			} else{
+//				this.setAttribute("class", ".condensed-sidebar");
+//			}
+//		};
+//	}
+
+	 
+  		function fadeOut(){
+			
+			//$('#menu-container').css("left", "25px");
+			$('.navbar-navbar-default').css("margin-left", "65px");
+			//$('.navbar-navbar-default').fadeTo(0.5s, )
+			//$('.active').css("float", "right");
+			//$('#bottom-navbar').css("left", "-125px");
+			$('.bottom-navbar-items').hide();
+			
+			//$('.bottom-navbar-items').css("margin-left", "35px");
+			$('#menu-container').fadeOut("slow", switchButtonsToRight());
+			
+			//switchButtonsToRight();
+			 $('.top-menu-items').click(function() {
+				$(this).toggleClass('glyphicon-chevron-left').toggleClass('glyphicon-chevron-right');
+				});
+		}
+		
+		function fadeIn(){
+			$('#menu-container').fadeIn("slow", switchButtonsToLeft())
+		}
+	
+		function switchButtonsToRight(){
+			   
+
+		}
+	
+		function switchButtonsToLeft(){
+			  $('.top-menu-items').click(function() {
+				$(this).find('i').toggleClass('glyphicon-chevron-right').toggleClass('glyphicon-chevron-left');
+				});  
+
+		}
+
+	</script>
+		
+</head>
+
+
+<body>
+<!-- Nav bar -->
+<div class="page-sidebar-fixed" id="menu-container">
+  <li class="active" id="active">
+  
+  	<ul class="top-menu-items" id="top-menu-items">
+			  	<a href="#" class="glyphicon glyphicon-home" role="button" aria-hidden="true"></a>
+				<a href="#" class="glyphicon glyphicon-cog" role="button" aria-hidden="true"></a>
+			 <div class="dropdown">
+			   <i class="glyphicon glyphicon-menu-hamburger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></i>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Action</a></li>
+						  <li><a href="#">Another action</a></li>
+						  <li><a href="#">Something else here</a></li>
+						  <span class="separator-menu"></span>
+					  <li><a href="#">Separated link</a></li>
+						  <span class="separator-menu"></span>
+						<li><a href="#">One more separated link</a></li>
+					</ul> 
+		    </div>
+		    	<i href="#" class="glyphicon glyphicon-chevron-left" id="glyphicon-chevron-left" onclick="fadeOut()" role="button"></i>
+		    
+		     </ul>
+		  
+		   </li> 
+		   
+
+	
+		   
+		<div class="sidebar-nav" id="sidebar-nav">
+		<span class="separator"></span>
+			<ul class="sidebar-ul">
+				 <a href="#anch1" data-scroll="" class="">
+					<span>Anchor 1</span>
+				</a>
+
+				 <a href="#anch2" data-scroll="" class="">
+					<span>Anchor 2</span>
+				</a>
+
+				<a href="#anch3" data-scroll="" class="">
+					<span>Anchor 3</span>
+				</a>
+				<a href="#anch4" data-scroll="" class="">
+					<span>Anchor 4</span>
+				</a>
+				<a href="#anch5" data-scroll="" class="">
+					<span>Anchor 5</span>
+				</a>
+				
+			</ul>
+  </div>
+	 
+		
+</div>
+<div class="bottom-navbar" id="bottom-navbar">
+ <span class="separator3"></span>
+  
+	  <ul class="bottom-navbar-items" id="bottom-navbar-items">
+	  	<i href="#" class="glyphicon glyphicon-refresh" role="button" aria-hidden="true"></i>
+	  	<i href="#" class="glyphicon glyphicon-plus" role="button" aria-hidden="true"></i>
+	  	<i href="#" class="glyphicon glyphicon-minus" role="button" aria-hidden="true"></i>
+  </ul>
+  </div>
+<!-- TOP NAVBAR --> 
+<nav class="navbar-navbar-default" id="top-navbar">
+    <div class="container-fluid">
+     
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse-navbar-collapse" id="defaultNavbar1">
+    
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>        
+      </div> 
+      <!-- /.navbar-collapse -->
+    </div> 
+    <!-- /.container-fluid -->
+    <span class="separator2"></span>
+  </nav>
+  
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+	
+
+<div class="body-container" id="body-container">
+	<div class="header-container">
+		<p>In here we will have the information about the asset currently clicked on </p>
+		<p>As well as other tabs to take you to other information</p>
+	</div>
+	
+	<div class="data-table-container">
+		<div class="data-table-header">
+			<p>This is where the data table will go; populated with values from the server</p>
+		</div>
+		<div class="data-table-table">
+			<table class="table table-hover" width="200" border="1">
+			  <tbody>
+			  <tr>
+			  	<td class="col">Type</td>
+			  	<td class="col">Date Purchase</td>
+			  	<td class="col">Asset Tag</td>
+			  	<td class="col">Serial Number</td>
+			  	<td class="col">User</td>
+			  </tr>
+				<tr>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				</tr>
+				<tr>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				  <td>&nbsp;</td>
+				</tr>
+			  </tbody>
+</table>
+		</div>
+		
+	</div>
+</div>
+
+</body>
+</html>
