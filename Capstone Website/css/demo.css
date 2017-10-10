@@ -1,8 +1,12 @@
-html, body {
-  overflow-x: hidden;
-	overflow-y: auto;
+body {
+    overflow: hidden;
+	margin: 0;
 	height: 100%;
 	width: auto;	
+}
+
+html{
+	height: 100%;
 }
 
 /* Lists */
@@ -16,8 +20,9 @@ ul {
   position: relative;
   padding: 20px 40px;
   padding-top: 80px;
-  height: inherit;
+  height: 100%;
   overflow-y: auto;
+	margin: 0;
   
 }
 .top-menu-buttons{
