@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Asset Management Database</title>
+        <meta name="description" content="Pushy is an off-canvas navigation menu for your website.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/demo.css">
+        <!-- Pushy CSS -->
+        <link rel="stylesheet" href="css/pushy.css">
+        
+        <link rel="stylesheet" href="css/homepage-body.css">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  	
+       	
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        
+       <script>
+		   
+		   function tableHighlight(){
+			   $('.data-table-table').on('click', 'tbody tr', function(event) {	  
+				   
+					   $(this).removeClass;
+				   
+				   $(this).addClass('highlight').siblings().removeClass('highlight');
+				   
+				});
+		   }
+		  
+			 function deleteRow(){
+				 
+//				 var id = document.getElementsByClassName("highlight").value - 1;
+//				 var table = document.getElementById("table");
+//				 rowsCount = table.querySelectorAll('tr[id="' + id + '"');
+//
+//				  for (var i = 0; i < rowsCount.length; i++) {
+//					table.deleteRow(rowsCount[i].rowIndex);
+//				  }
+				 
+				 
+//				 $('#delete-btn').on('click', function(){
+					var table = document.getElementById("data-table");
+					var rowNum = table.rows.length;
+					var counter = 0;
+				 
+					//for(var i = 1; i < table.rows.length; i++){
+						//var isRow = table.rows[i];
+						
+						//	table.hasClass("highlight").deleteRow();
+						//	i--;
+						
+					//}
+//				 });
+			 	
+ 			}
+		</script>
+        
+    </head>
+    
+    <body>
+        <header class="site-header push">
+        <div class="top-menu-buttons" id="top-menu-items">
+       	    <button class="glyphicon glyphicon-chevron-right" id="menu-btn" ></button>
+        	<a href="#" class="glyphicon glyphicon-home" role="button" aria-hidden="true" id="home"></a>
+			<a href="#" class="glyphicon glyphicon-cog" role="button" aria-hidden="true" id="cog"></a>
+			 <div class="dropdown">
+			   <i class="glyphicon glyphicon-menu-hamburger" data-toggle="dropdown" role="button" id="hamburger" aria-haspopup="true" aria-expanded="false"></i>
+					<ul class="dropdown-menu" id="dropdown-menu">
+					  <li><a href="#">Action</a></li>
+						  <li><a href="#">Another action</a></li>
+						  <li><a href="#">Something else here</a></li>
+						  <span class="separator-menu"></span>
+					  <li><a href="#">Separated link</a></li>
+						  <span class="separator-menu"></span>
+						<li><a href="#">One more separated link</a></li>
+					</ul> 
+		    </div>
+        </div>
+        <div class="header-text-container">
+         	<input type="text" class="form-control" placeholder="Search">
+         <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
+        </div>
+         
+       
+       </header>
+		
+        
+        <!-- Pushy Menu -->
+        <nav class="pushy pushy-left" id="pushy-left" data-focus="#first-link">
+			   
+            <div class="pushy-content">
+                <ul>
+                    <li class="pushy-submenu">
+                        <button id="first-link">Submenu 1</button>
+                        <ul>
+                            <li class="pushy-link"><a href="#">Item 1</a></li>
+                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="pushy-submenu">
+                        <button>Submenu 2</button>
+                        <ul>
+                            <li class="pushy-link"><a href="#">Item 1</a></li>
+                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="pushy-submenu">
+                        <button>Submenu 3</button>
+                        <ul>
+                            <li class="pushy-link"><a href="#">Item 1</a></li>
+                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="pushy-submenu">
+                        <button>Submenu 4</button>
+                        <ul>
+                            <li class="pushy-link"><a href="#">Item 1</a></li>
+                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="pushy-link"><a href="#">Item 1</a></li>
+                    <li class="pushy-link"><a href="#">Item 2</a></li>
+                    <li class="pushy-link"><a href="#">Item 3</a></li>
+                    <li class="pushy-link"><a href="#">Item 4</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- Your Content -->
+        <div class="body-container" id="container">
+            
+		
+        <div class="header-container">
+        	<div class="header-title">
+        		
+        	</div>
+        
+		<p>In here we will have the information about the asset currently clicked on </p>
+		<p>As well as other tabs to take you to other information</p>
+	</div>
+	
+	<div class="data-table-container" autofocus>
+		<div class="table-buttons">
+			<ul>  <!-- file:///Capstone%20Website/Form-add-row.html -->
+
+<!--
+				<button class="glyphicon glyphicon-plus-sign" onClick="window.open('https://s3.amazonaws.com/cpsnbucket/Capstone+Website/Form-add-row1.html', '_blank', 'toolbar=no,scrollbars=no,resizable=yes,top=200,left=500,width=500,height=300')" 	
+				role="button"></button>
+-->
+
+
+
+			<button class="glyphicon glyphicon-plus-sign" onClick="window.open('file:///C:/Users/dkins_000/Desktop/Capstone%20Website/Form-add-row1.html', '_blank', 'toolbar=no,scrollbars=no,resizable=yes,top=200,left=500,width=500,height=300')" 	
+				role="button"></button>
+
+				<button class="glyphicon glyphicon-remove" id="delete-btn" onClick="deleteRow()" role="button"></button>
+				<li class="glyphicon glyphicon-edit" role="button"></li>
+			</ul>
+		</div>
+		<div class="data-table-table" id="data-data-table">
+			<table class="table table-hover table-bordered" id="data-table" onClick="tableHighlight()" >
+				<thead>
+					  <tr class="row">
+						<td class="col">PLACEHOLDER</td>
+						<td class="col">PLACEHOLDER</td>
+						<td class="col">PLACEHOLDER</td>
+						<td class="col">PLACEHOLDER</td>
+						<td class="col">PLACEHOLDER</td>
+					  </tr>
+				</thead>
+				<tbody id="table">	
+				  <tr class="row">
+					  <td class="cell">HEY LOOK ITS ME</td>
+					  <td class="cell">NO OVER HERE</td>
+					  <td class="cell">NO HERE</td>
+					  <td class="cell">OH SNAP THERES ANOTHER ONE</td>
+					  <td class="cell">FIVE! WOW</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					 <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					 <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					  <td class="cell">&nbsp;</td>
+				  	  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					 <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					 <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+					<tr class="row">
+					 <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					  <td class="cell">&nbsp;</td>
+					</tr>
+				  </tbody>
+			</table>
+		</div>
+		<p>
+		echo here
+		<?php
+			$moviesdb = new mysqli('capstonedb.cdm0wchr34ds.us-east-2.rds.amazonaws.com','MasterUser','Change.17','CapstoneDB');
+			echo "jere";
+			if ($moviesdb->connect_errno()) {
+				echo "Database Access Error!";
+				echo "problem: " . mysqli_connect_errno();
+			} 
+			else {
+				echo "nothing";
+			}
+		?>
+</p>
+	</div>
+
+        </div>
+
+        <div class="site-overlay" name ="site-overlay" onClick="switchButtonsRight()"></div>
+
+        <!-- Pushy JS -->
+       <script src="js/pushy.min.js"></script>
+
+    </body>
+    
+    
+</html>

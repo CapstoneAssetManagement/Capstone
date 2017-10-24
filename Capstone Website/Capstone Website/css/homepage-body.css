@@ -1,0 +1,156 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+
+.header-container{
+	width: auto;
+	height: 35%;
+	background-color: #292929;
+	color: #ffffff;
+	margin-top: -10px;
+}
+
+#header-section-1{
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+#header-section-1 ul{
+	width: 100%;
+	height: 33%;
+	font-size: 20px;
+}
+
+#subheader-Section-1 p, #subheader-Section-2 p, #subheader-Section-3 p{
+	font-size: 20px;
+}
+
+ #header-section-2{
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+#header-section-2 ul{
+	width: 100%;
+	height: 50%;
+	font-size: 20px;
+}
+
+#subheader-Section-4 p, #subheader-Section-5 p{
+	font-size: 20px;
+}
+
+#header-section-3{
+	float: right;
+	width: 33%;
+	height: 100%;
+} 
+
+#header-section-3 ul{
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+}
+
+#subheader-Section-6 p{
+	font-size: 20px;
+}
+
+
+
+.data-table-container{
+	width: auto;
+	height: 55%;	
+	margin-top: 10px;
+	
+/*
+	min-width: 960px; 
+	min-height: 350px;
+*/
+	background-color: #FFFFFF;
+	
+}
+
+.table-buttons{
+	width: 40%;
+	zoom: 1.5;
+}
+
+.table-buttons li{
+	width: 10%;
+}
+
+.data-table-table{
+	height: 100%;
+	overflow-y: auto;
+	width: 100%;
+	
+}
+
+.data-table-table table{
+	
+	width: 100%;
+	background-color: #292929;
+	color: #999999;
+	
+}
+
+
+
+.data-table-table thead{
+	
+	background-color: #000;
+	color: #FFF;
+	width: auto;
+	
+	
+	/*height: auto;*/
+	
+	
+/*	overflow: auto;*/
+}
+
+
+
+
+
+/*
+.data-table-table tbody{
+	width: 100%;
+	height: 100%; 
+	overflow: auto;
+	
+}
+*/
+
+
+
+#data-table tbody tr:hover{
+	color: #000000;
+	background-color: #34A4C2;
+}
+
+#data-table table tr{
+	height: 50px;
+}
+
+#data-table tbody tr{
+	width: 100%;
+	
+}
+
+
+
+.highlight{  
+	background-color: #AFAFAF; 
+	color: black;
+}
+
+
+
+
+
+
+ 

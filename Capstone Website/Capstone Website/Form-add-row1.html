@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>add-button-template</title>
+<link rel="stylesheet" href="Form-add-row.css">
+
+<script>
+
+	function openCity(evt, tab) {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+
+		// Show the current tab, and add an "active" class to the button that opened the tab
+		document.getElementById(tab).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+	
+	</script>
+
+</head>
+
+<body>
+
+	<div class="tab">
+		  <button class="tablinks" onclick="openCity(event, 'ComputerAssets')">Computer Assets</button>
+			<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("ComputerAssets").click();
+		</script>
+		  
+		  <button class="tablinks" onclick="openCity(event, 'Employees')">Employees</button>
+		  <button class="tablinks" onclick="openCity(event, 'Software')">Software</button>
+	</div>
+	
+	<div id="ComputerAssets" class="tabcontent" >
+		
+	<form method="post" action="Form-add-row-CA.php">
+		<div class="container-left">
+			Asset Tag Number:<br>
+			<input type="text" name="assetTag" id="assetTag"><br>
+			Employee Signing Out:<br>
+			<input type="text" name="employee" id="employee"><br>
+			Serial Number:<br>
+			<input type="text" name="serialNumber" id="serialNumber"><br>
+			Quantity Left:<br>
+			<input type="text" name="quantity" id="quantity"><br>
+			
+		</div>
+		<div class="container-right">
+			Date Purchased:<br>
+			<input name="datePurchased" id="datePurchased"><br>
+			<script>
+				document.getElementById('datePurchased').value = Date();
+			</script>
+			
+			Description:<br>
+			<textarea type="text" name="description" id="description" style="width: 200px; height: 100px" rows="10" cols="80"></textarea><br>
+			
+			<div class="container-buttons">
+				<button name="ok-button" type="submit" >OK</button>
+					
+				
+				<button name="cancel-button" type="button" onClick="window.close()">Cancel</button>
+				
+			
+			</div>
+		</div>
+	</form>
+			
+	</div>
+	
+	
+	<div id="Employees"  class="tabcontent" style="display: none;">
+	<form method="post" action="Form-add-row-Employee.php">
+		<div class="container-left">
+			Employee ID:<br>
+			<input type="text" name="employee_id" id="employee_id"><br>
+			Employee Name:<br>
+			<input type="text" name="employee_name" id="employee_name"><br>
+			Department:<br>
+			<input type="text" name="department" id="department"><br>
+			Start Date:<br>
+			<input type="text" name="start_date" id="start_date"><br>
+			
+		</div>
+		<div class="container-right">
+			Administrator:<br>
+			<input name="admin" id="admin"><br>
+			
+			
+			Salary:<br>
+			<input type="text" name="salary" id="salary"><br>
+			
+			<div class="container-buttons">
+				<button name="ok-button" type="submit" >OK</button>
+				<button name="cancel-button" type="button" onClick="window.close()">Cancel</button>
+			</div>
+		</div>
+	</form>
+			
+	</div>
+	
+	<div id="Software"  class="tabcontent" style="display: none;">
+	<form method="post" action="Form-add-row-Software.php">
+		<div class="container-left">
+			Software Name:<br>
+			<input type="text" name="software" id="software"><br>
+			Software Asset Number:<br>
+			<input type="text" name="software_asset_number" id="software_asset_number"><br>
+			Date Purchased:<br>
+			<input type="text" name="datePurchased" id="datePurchased"><br>
+			Date Downloaded:<br>
+			<input type="text" name="downloaded" id="downloaded"><br>
+			
+		</div>
+			License:<br>
+			<input name="license" id="license"><br>
+					
+			Expiration Date:<br>
+			<input type="text" name="expiration_date" id="expiration_date"><br>
+			
+			<div class="container-buttons">
+				<button name="ok-button" type="submit" >OK</button>
+				<button name="cancel-button" type="button" onClick="window.close()">Cancel</button>
+			</div>
+		</div>
+	</form>
+			
+	</div>
+	
+	
+		
+</body>
+</html>
