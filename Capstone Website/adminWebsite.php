@@ -8,11 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Cache-control" content="no-cache">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/demo.css">
+        <link rel="stylesheet" href="css/adminDemo.css">
         <!-- Pushy CSS -->
         <link rel="stylesheet" href="css/pushy.css">
         
-        <link rel="stylesheet" href="css/homepage-body.css">
+        <link rel="stylesheet" href="css/adminHomepageBody.css">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   	
        	
@@ -47,8 +47,9 @@
 		  
 			 function tableCall(){
 				
-				  
+				  //var value = $('#pushy-submenu').find(':open').text();
 				  var value = $('li.pushy-submenu.pushy-submenu-open').text();
+
 				   $.post("test.php",{value:value}, function(data){
 					 $("#data-table").html(data);
 				   });
@@ -157,10 +158,11 @@
 						<li><a href="#">One more separated link</a></li>
 					</ul> 
 		    </div>
+			
         </div>
 		
+		
         <div class="header-text-container">
-			
 				<input type="text" class="form-control" name="textarea" id="textarea" placeholder="Search">
 			    <div class="dropdownSearch">
 					<i role="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -188,16 +190,17 @@
 			
         </div>
          
-		 <div class="logout">
-				
-				<a href="adminlogin.html" class="glyphicon glyphicon-log-in text-center" role="button" aria-hidden="true" id="plus">
-					<br><span style="font-size: 6px;">Login</span></a>
-				
+       <div class="table-add">
+				<a href="#" class="glyphicon glyphicon-plus text-center" role="button" aria-hidden="true" id="plus" 
+				onClick="window.open('http://localhost/Capstone%20Website/addTable.html', '_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=750,height=300')">
+					<br><span style="font-size: 6px;">Add Table</span></a>
+				<a href="#" class="glyphicon glyphicon-remove text-center" role="button" aria-hidden="true" id="plus"
+					onClick="window.open('http://localhost/Capstone%20Website/deleteTable.html', '_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=750,height=300')">
+				<br><span style="font-size: 6px;">Remove Table</span></a>
 				<a href="logout.html" class="glyphicon glyphicon-log-out text-center" role="button" aria-hidden="true" id="plus">
 					<br><span style="font-size: 6px;">Logout</span></a>
-					
-		</div>
-       
+				
+			</div>
        </header>
 		
         
@@ -284,12 +287,12 @@
 				role="button"></button>
 -->
 
-			<button class="glyphicon glyphicon-plus-sign" onClick="window.open('http://localhost/Capstone%20Website/Form-add-row.php', '_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=500,height=300')" 	
-				role="button"></button>
+			<button class="glyphicon glyphicon-plus-sign" onClick="window.open('http://localhost/Capstone%20Website/Form-add-row.php', 
+				'_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=500,height=300')"></button>
 
-				<button class="glyphicon glyphicon-remove" id="delete-btn" onClick="window.open('http://localhost/Capstone%20Website/deleteRow.php', '_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=500,height=300')"
-					role="button"></button>
-				<button class="glyphicon glyphicon-edit" role="button"></button>
+				<button class="glyphicon glyphicon-remove" id="delete-btn" onClick="window.open('http://localhost/Capstone%20Website/deleteRow.php', 
+						'_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=200,left=500,width=500,height=300')"></button>
+				<button class="glyphicon glyphicon-edit" id="edit-btn"></button>
 			</ul>
 		</div>
 		<div class="data-table-table" id="data-data-table">
@@ -302,7 +305,7 @@
 						echo 'problem: ' . mysqli_connect_errno();
 					} else {
 						
-						$query = "SELECT * FROM `CapstoneDB`.`Computer Assets`";
+						$query = "SELECT * FROM `Computer Assets`";
 						$result = mysqli_query($assetdb, $query);
 						
 						 echo "<table class='table table-hover table-bordered' id='data-table' onclick=' tableHighlight(); findRow(); ' >";

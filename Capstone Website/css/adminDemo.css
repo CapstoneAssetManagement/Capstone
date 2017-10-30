@@ -1,0 +1,242 @@
+body {
+    overflow: hidden;
+	margin: 0;
+	height: 100%;
+	width: auto;	
+	font-family: 'Open Sans', sans-serif;
+	background: #092756;
+	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+}
+
+html{
+	height: 100%;
+}
+
+/* Lists */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+#container {
+  position: relative;
+  padding: 20px 40px;
+  padding-top: 80px;
+  height: 100%;
+  overflow-y: auto;
+	margin: 0;
+  
+}
+.top-menu-buttons{
+	width: 200px;
+	float: left;
+	height: inherit;
+}
+
+
+#hamburger{
+	width: 100%;
+	height: 97%;
+}
+
+
+/* Menu Button */
+.top-menu-buttons a,
+.top-menu-buttons button, .dropdown i{
+  float: left;
+  line-height: 25px;
+  width: 25%;
+  height: inherit;
+  background: #000;
+  color: #FFF;
+  padding-left: 5px;
+  border: 0px;
+  zoom: 2;
+  top: 0;
+  
+	
+}
+
+#cog, #home, #hamburger{
+	top: 1px;
+	
+	height: auto;
+	
+}
+
+#cog:hover, #home:hover, #hamburger:hover{
+	margin: 0px;
+	height: auto;
+	bottom: 0;
+}
+.top-menu-buttons a:hover, .table-add a:hover,
+.top-menu-buttons button:hover, .dropdown i:hover,
+#hamburger:hover{
+	color: #000000;
+	background-color: #34A4C2;
+	height: auto;
+	text-decoration: none;
+	top: 0px;
+	bottom: 0px;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  background: #000;
+  color: #FFF;
+  width: 100%;
+  height: auto;
+  z-index: 9998;
+}
+
+.header-text-container{
+	float: left;
+	margin-top: 10px;
+	margin-left: 50px;
+	
+}
+
+
+
+ #textarea, #submit-btn, .dropdownSearch, 
+ .btn.btn-default.dropdown-toggle{	
+	float: left;
+	width: auto;
+}
+
+.dropdownSearch{
+	display: inline-block;
+	position: relative;
+	
+	
+}
+
+#dropdownSearchmenu{
+	margin-top: -2px;
+	width: auto;
+	height: auto;
+}
+
+#dropdownSearchmenu ul input {
+	width: auto;
+	display: list-item;
+	height:  auto;
+}
+
+#checkBox{
+	
+	width: auto;
+}
+
+.dropdownSearch:hover #dropdownSearchmenu{
+	display: block;
+	color: #000000;
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  border-top: 1px solid #EEE;
+  color: #999;
+  padding: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/*# sourceMappingURL=demo.css.map */
+
+
+.dropdown{
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	width: 25%;
+}
+
+
+
+#dropdown-menu{
+	display: none;
+	width: auto;
+	height: 100%;
+	position: absolute;
+	margin-top: 2px;
+	background-color: #f9f9f9;
+	padding: 0px;
+}
+
+
+
+#dropdown-menu a{
+
+	
+	height: 100%;
+	color: #000000;
+	background-color: #EEE;
+	font-size: 60%;
+	text-decoration: none;
+
+	display: block;
+
+	width: 100%;
+
+	text-align: left;
+}
+
+
+
+.dropdown:hover #dropdown-menu{
+
+	display: block;
+
+	
+
+	
+
+}
+
+
+
+.dropdown:hover #dropdown-menu a:hover{
+
+	color: #000000;
+
+	background-color: #34A4C2;
+
+}
+
+
+
+#dropdown-menu .separator-menu{
+
+	border-top: .5px solid #606060;
+
+	height: .5px;
+
+	display: block;
+
+	
+
+}
+
+span.separator{
+
+	border-top: 2px solid #606060;
+
+	height: .5px;
+
+	display: block;
+
+	z-index: 1;
+
+}
+
+
+

@@ -1,0 +1,25 @@
+<html>
+<head> 
+<link rel="stylesheet" href="css/test.css" type="text/css"/>
+</head>
+
+<div class="login">
+	<h1>Administrator Login</h1>
+    <form method="post" action="adminlogin.php">
+    	<input type="text" name="u" placeholder="Username" required="required" />
+        <input type="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+		
+		 <script type="text/javascript">
+                    function isEmpty(){
+                        if(document.forms['form'].passwordField.value === "") {
+                            alert("The password cannot be empty.");
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+    </form>
+			
+</div>
+</html>

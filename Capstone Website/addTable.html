@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>add-button-template</title>
+<link rel="stylesheet" href="Form-add-row.css">
+ <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+
+		var x=0
+		
+		function appendRow()
+		{
+		   var d = document.getElementById('container 2');
+		  if(x < 10){ 
+		    d.innerHTML += "Column "+ ++x + "<input type='text' name='column"+ x +"' id='column"+ x +"'><br>";
+		    
+			d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value='int'>"  					+ "Integer" + "</input>";
+		    d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value='VARCHAR(255)'>" 	+ "Varchar(255)" + "</input>";
+			d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value='BOOLEAN'>" 			+ "Boolean" + "</input>";
+			d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value='DATE'>" 					+ "Date" +"</input>";
+			d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value ='TIME'>" 				+ "Time" + "</input>";
+			d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value = 'FLOAT'>"				+ "Float"  +"</input><br>";
+			
+			//d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value ='Primary Key'>" 	+ "Primary Key" + "</input>";
+			//d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value ='Foreign Key'>" 	+ "Foreign Key" + "</input>";
+			//d.innerHTML += "<input  type='radio' name='checkBox" + x + "[]' value ='NOT NULL'>" 	+ "NOT NULL" + "</input><br>";
+		 } else{
+				$message = "Table may only have a max of 10 columns";
+				alert($message);
+			}
+		   
+		}
+		
+</script>
+
+</head>
+	<body>
+		<form method="post" action="addTable.php" id="myForm">
+			<div id="container">
+				Enter Table Name: <br>
+				<input type="text" name="addTableName" id="addTableName"> <br>
+				
+				
+				
+				<button name="addColumnButton" type="button" id="addColumnButton" onClick="appendRow()">Add Column </button>
+				<button name="ok-button" type="submit" >OK</button>
+				<button name="cancel-button" type="button" onClick="window.close()">Cancel</button> 
+			</div>
+			
+			<div id="container 2"> 
+				
+			
+			</div>
+		</form>
+
+
+
+
+
+	</body>
+</html>
